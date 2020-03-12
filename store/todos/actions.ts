@@ -14,8 +14,16 @@ export function addTodo(task: string) {
 }
 
 export function doneTodo(id: string) {
+  console.log('doneTodo id ======= : ', id)
   return {
     type: types.doneTodo,
+    payload: { id },
+  }
+}
+
+export function removeTodo(id: string) {
+  return {
+    type: types.removeTodo,
     payload: { id },
   }
 }
